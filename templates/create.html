@@ -1,0 +1,24 @@
+{%extends "base.html"%}
+
+{%block title%}Crear Persona{%endblock%}
+
+{%block content%}
+    <h2>Nuevo Registro</h2>
+    <form action="/save" method="POST">
+        <div class="mb-3">
+            <label for="" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" placeholder="Nombre de la persona" required>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Telefono</label>
+            <input type="text" class="form-control" name="telefono" placeholder="Telefono de la persona" required>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Fecha Nacimiento</label>
+            <input type="date" class="form-control" name="fecha_nac" required>
+        </div>
+        <div class="">
+            <input type="submit" name="" id="" class="btn btn-primary" value="Guardar">
+        </div>
+    </form>
+{%endblock%}

@@ -1,0 +1,26 @@
+{%extends "base.html"%}
+{%block title%}Editar{%endblock%}
+
+{%block content%}
+    <h2>Editar Registro</h2>
+
+    <form action="/update" method="POST">
+        <input type="hiden" name="id" value="{{persona.id}}">
+        <div class="mb-3">
+            <label for="" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" value="{{persona.nombre}}"
+            placeholder="Nombre de la persona" required>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Telefono</label>
+            <input type="text" class="form-control" name="telefono" value="{{persona.telefono}}" placeholder="Telefono de la persona" required>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Fecha Nacimiento</label>
+            <input type="date" class="form-control" name="fecha_nac" value="{{persona.fecha_nac}}" required>
+        </div>
+        <div class="">
+            <input type="submit" name="" id="" class="btn btn-primary" value="Guardar">
+        </div>
+    </form>
+{%endblock%}
